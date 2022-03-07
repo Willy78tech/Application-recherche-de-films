@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Projet 1</title>
+</head>
+<body>
+     <h1 class="resultat">Disponibles</h1>  
+        <% res.forEach(function(element) { %>
+            <div class="container">
+                <div class="photo">
+                        <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/<%= element.poster_path %>" alt=" Image is not Avalaible for this Movie !!">
+                        <% if (element.poster_path === null) { %>
+                                <img class="available" src="nondisponible.jpeg" alt="photo">
+                          <% } %>
+                </div>
+                <div class="description">
+                    <p>
+                        <span> Titre : </span> <%= element.title %><br><br>
+                        <span> Release date : </span><%= element.release_date %><br><br>
+                        <span> Vote average : </span><%= element.vote_average %><br><br>
+                        <span> Overview : </span><%= element.overview %><br><br>
+                    </p>
+                </div>
+            </div>   
+        <% }) %> 
+</body>
+</html>
