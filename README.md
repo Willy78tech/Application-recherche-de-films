@@ -1,4 +1,4 @@
-Applicatio de recherche par mots clés ,
+Application de recherche par mots clés ,
 
 
 Lancer "npm start" puis 
